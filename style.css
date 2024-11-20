@@ -3,7 +3,7 @@
     src: url('fonts/LemonMelon.ttf') format('truetype');
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -14,7 +14,7 @@ body{
     font-family: 'Lemon Melon', sans-serif; 
 }
 
-.heart{
+.heart {
     height: 70px;
     width: 70px;
     background: #f20044;
@@ -22,9 +22,9 @@ body{
     transform: rotate(-45deg);
     box-shadow: -10px 10px 90px #f20044;
     animation: heart 0.6s linear infinite;
-
 }
-.heart:before{
+
+.heart:before {
     content: '';
     position: absolute;
     height: 70px;
@@ -34,7 +34,8 @@ body{
     border-radius: 50px;
     box-shadow: -10px -10px 90px #f20044;
 }
-.heart:after{
+
+.heart:after {
     content: '';
     position: absolute;
     height: 70px;
@@ -44,16 +45,16 @@ body{
     border-radius: 50px;
     box-shadow: 10px 10px 90px #f20044;
 }
-@keyframes heart{
-    0%{
+
+@keyframes heart {
+    0% {
         transform: rotate(-45deg) scale(1.07);
     }
-    80%{
+    80% {
         transform: rotate(-45deg) scale(1.0);
     }
-    100%{
+    100% {
         transform: rotate(-45deg) scale(0.8);
-
     }
 }
 
@@ -86,12 +87,13 @@ body{
     position: relative;
     z-index: 2;
 }
+
 h3#text {
     text-decoration: none;
     margin-bottom: 20%;
     color: white;
-    
 }
+
 /* Animation for the button */
 .btn::before {
     content: '';
@@ -118,5 +120,36 @@ h3#text {
     100% {
         transform: scale(0);
         opacity: 0.8;
+    }
+}
+
+/* Media Query for Mobile View */
+@media (max-width: 768px) {
+    .heart {
+        height: 50px; /* Maintain heart shape */
+        width: 50px;  /* Maintain heart shape */
+    }
+    
+    .heart:before {
+        height: 50px; /* Maintain heart shape */
+        width: 50px;  /* Maintain heart shape */
+    }
+
+    .heart:after {
+        height: 50px; /* Maintain heart shape */
+        width: 50px;  /* Maintain heart shape */
+    }
+
+    .btn {
+        padding: 10px 20px;
+        margin-top: 50%;
+    }
+
+    .btn a {
+        font-size: 16px;
+    }
+
+    h3#text {
+        margin-bottom: 50%;
     }
 }
